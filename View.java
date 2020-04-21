@@ -14,10 +14,18 @@ import java.awt.event.MouseEvent;
 import java.beans.EventHandler;
 
 public class View {
-
+    /**
+     * Defines methods and variables needed to launch a new instance of the GUI
+     */
     public static void newGUI(Stage primaryStage)
     {
-        //primaryStage.show();
+        /**
+         * Called to launch a new instance of the GUI
+         *
+         * @param primaryStage corresponds to the GUI's Stage
+         * Elements of the GUI consist of text, a ComboBox, and "Apply" button to launch action
+         */
+
         primaryStage.setTitle("Java FX Exercise GUI");
         Group root = new Group();
 
@@ -45,9 +53,13 @@ public class View {
 
         primaryStage.setScene(scene);
         primaryStage.show();
+
         Controller controller = new Controller();
         MouseEvent click;
 
+        /**
+         * Launch a new instance of the GUI when "Exercise 1" is selected
+         */
           applyButton.setOnAction(event-> {
               controller.handleButtonAction(event, comboBox);
           });
