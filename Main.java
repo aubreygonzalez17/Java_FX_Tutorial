@@ -15,7 +15,17 @@ import javafx.stage.Stage;
 import javax.xml.soap.Text;
 import java.awt.event.MouseEvent;
 
+/**
+ * This is the main class for the JavaFX exercise Launch Pad
+ */
+
 public class Main extends Application {
+
+    /**
+     *  Entry point.
+     *
+     * No parameters expected
+     */
 
     Model model = new Model();
     View view = new View();
