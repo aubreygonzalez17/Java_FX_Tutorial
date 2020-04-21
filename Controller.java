@@ -18,11 +18,15 @@ public class Controller {
     View view = new View();
 
 
-    public void handleButtonAction(ActionEvent event)
+    public void handleButtonAction(ActionEvent event, ComboBox comboBox)
     {
         Stage primaryStage = new Stage();
         System.out.println("You clicked me!");
-        view.newGUI(primaryStage);
+        String selected = (String)comboBox.getValue();
+        if (selected == "Exercise 1")
+        {
+            view.newGUI(primaryStage);
+        }
     }
 
 }
