@@ -8,6 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.event.*;
+
+import java.awt.event.MouseEvent;
+import java.beans.EventHandler;
 
 public class View {
 
@@ -42,18 +46,13 @@ public class View {
 
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
+        Controller controller = new Controller();
+        MouseEvent click;
 
-    public static void start(Stage primaryStage) throws Exception {
-        // Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
-
-
-    /*    applyButton.setOnAction(event-> {
-            // Controller logic here
-        });*/
+          applyButton.setOnAction(event-> {
+              controller.handleButtonAction(event);
+          });
 
     }
-
 
 }
