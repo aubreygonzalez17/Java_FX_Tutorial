@@ -22,8 +22,8 @@ public class Main extends Application {
     Controller controller = new Controller();
 
     @Override
-   public void start(Stage primaryStage) throws Exception {
-        View.newGUI(primaryStage);
+    public void start(Stage primaryStage) throws Exception {
+        view.newGUI(primaryStage);
     }
 
     public static void main(String[] args) {
