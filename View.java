@@ -17,7 +17,7 @@ public class View {
 
     public static void newGUI(Stage primaryStage)
     {
-        primaryStage.show();
+        //primaryStage.show();
         primaryStage.setTitle("Java FX Exercise GUI");
         Group root = new Group();
 
@@ -37,7 +37,6 @@ public class View {
         applyButton.setLayoutX(10);
         applyButton.setLayoutY(150);
 
-
         root.getChildren().add(comboBox);
         root.getChildren().add(text);
         root.getChildren().add(applyButton);
@@ -50,7 +49,7 @@ public class View {
         MouseEvent click;
 
           applyButton.setOnAction(event-> {
-              controller.handleButtonAction(event);
+              controller.handleButtonAction(event, comboBox);
           });
 
     }
