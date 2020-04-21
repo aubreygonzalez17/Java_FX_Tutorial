@@ -17,45 +17,13 @@ import java.awt.event.MouseEvent;
 
 public class Main extends Application {
 
+    Model model = new Model();
+    View view = new View();
+    Controller controller = new Controller();
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        // Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
-        primaryStage.show();
-        primaryStage.setTitle("Java FX Exercise GUI");
-        // primaryStage.setWidth(600);
-        // primaryStage.setHeight(300);
-        Group root = new Group();
-
-        Label text = new Label("Please select an exercise");
-
-        Button button = new Button("Apply");
-
-        ComboBox comboBox = new ComboBox();
-        Button applyButton = new Button("Apply");
-        // Text text = new Text();
-        comboBox.getItems().add("Exercise 1");
-        comboBox.getItems().add("Exercise 2");
-        comboBox.getItems().add("Exercise 3");
-        comboBox.setLayoutX(10);
-        comboBox.setLayoutY(50);
-        text.setLayoutX(10);
-        text.setLayoutY(30);
-        applyButton.setLayoutX(10);
-        applyButton.setLayoutY(150);
-
-
-        root.getChildren().add(comboBox);
-        root.getChildren().add(text);
-        root.getChildren().add(applyButton);
-        Scene scene = new Scene(root, 500, 200);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-        applyButton.setOnAction(event-> {
-          //  launch();
-        });
-
+   public void start(Stage primaryStage) throws Exception {
+        View.newGUI(primaryStage);
     }
 
     public static void main(String[] args) {
